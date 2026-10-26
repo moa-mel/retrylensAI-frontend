@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import type { Metadata } from "next";
 import "./globals.css";
 import { Sidebar } from "@/components/layout/sidebar";
@@ -13,9 +14,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body>
         <div className="app-shell">
-          <Sidebar />
+          <Suspense fallback={<aside className="sidebar skeleton" />}>
+            <Sidebar />
+          </Suspense>
           <div className="main-shell">
-            <Header />
+            <Suspense fallback={<header className="topbar skeleton" />}>
+              <Header />
+            </Suspense>
             <main className="main-content">{children}</main>
           </div>
         </div>

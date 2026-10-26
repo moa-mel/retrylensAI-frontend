@@ -10,10 +10,11 @@ export default async function IncidentDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
+  
 
   return (
     <PageContainer
-      eyebrow={`INCIDENT / ${id}`}
+      eyebrow={`INCIDENT/${id}`}
       title="Incident details"
       description="Inspect the captured request and response, run a diagnosis, and verify a replay."
     >
