@@ -2,6 +2,8 @@
 
 This is a Next.js App Router frontend scaffold for the RetryLens AI NestJS API.
 
+THE FRONTEND LIVE URL: https://sing-flow-zug6.onrender.com
+
 ## Setup
 
 1. Put this folder in your project as `web/`.
