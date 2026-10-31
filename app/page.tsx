@@ -6,10 +6,14 @@ import { PageContainer } from "@/components/layout/page-container";
 export default function DashboardPage() {
   return (
     <PageContainer
-      eyebrow="OVERVIEW"
-      title="Incident dashboard"
-      description="Understand production failures and verify your fixes."
-      actions={<Link className="button button-primary" href="/incidents">View all incidents</Link>}
+      eyebrow="YOUR WORKSPACE"
+      title="Good to have you back."
+      description="Monitor application failures, investigate their causes, and verify your fixes."
+      actions={
+        <Link className="button button-primary" href="/incidents">
+          Explore incidents <span aria-hidden="true">→</span>
+        </Link>
+      }
     >
       <IncidentStats />
       <RecentIncidents />
